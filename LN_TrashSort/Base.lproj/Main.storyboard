@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5la-oM-u6r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Trash Can-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Trash Can" id="BYZ-38-t0r" customClass="ViewController" customModule="LN_TrashSort" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,153 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Qi1-tC-Mc5">
+                                <rect key="frame" x="20" y="114" width="560" height="406"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="nbZ-jz-UW2">
+                                        <rect key="frame" x="20" y="0.0" width="520" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trash Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lao-pT-Uir">
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCM-18-hya">
+                                                <rect key="frame" x="110" y="0.0" width="410" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JaA-ZL-hSM"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fHB-3m-3TD">
+                                        <rect key="frame" x="20" y="90" width="520" height="212"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Trash Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohB-gH-k9O">
+                                                <rect key="frame" x="0.0" y="0.0" width="520" height="62"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDc-NA-ogt">
+                                                <rect key="frame" x="0.0" y="62" width="520" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="QZu-Vj-9Ry"/>
+                                                </constraints>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="170" id="fLt-Do-sAD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-bK-hAZ">
+                                        <rect key="frame" x="220" y="352" width="121" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="Btk-gw-KVb"/>
+                                            <constraint firstAttribute="width" constant="121" id="W6h-T1-OTy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="TRASH IT!!"/>
+                                        <connections>
+                                            <action selector="trashItButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mft-oa-tQE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fHB-3m-3TD" secondAttribute="trailing" constant="20" symbolic="YES" id="JDb-gz-gSJ"/>
+                                    <constraint firstItem="nbZ-jz-UW2" firstAttribute="leading" secondItem="Qi1-tC-Mc5" secondAttribute="leading" constant="20" symbolic="YES" id="ear-re-K5G"/>
+                                    <constraint firstItem="fHB-3m-3TD" firstAttribute="leading" secondItem="Qi1-tC-Mc5" secondAttribute="leading" constant="20" symbolic="YES" id="h9A-vW-WKm"/>
+                                    <constraint firstAttribute="trailing" secondItem="nbZ-jz-UW2" secondAttribute="trailing" constant="20" symbolic="YES" id="snb-zl-Ncl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qi1-tC-Mc5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="8AE-7w-Gg9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qi1-tC-Mc5" secondAttribute="bottom" constant="80" id="ICa-Bh-aRj"/>
+                            <constraint firstAttribute="trailing" secondItem="Qi1-tC-Mc5" secondAttribute="trailing" constant="20" symbolic="YES" id="JDy-wo-pzU"/>
+                            <constraint firstItem="Qi1-tC-Mc5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="jKZ-h2-NTK"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="TrashCan" id="jOH-gK-eMw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="aJz-zQ-iNu">
+                            <connections>
+                                <segue destination="oS4-Ed-3kD" kind="show" id="ENf-KX-gi8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="trashnameTextField" destination="fCM-18-hya" id="4qF-2W-teN"/>
+                        <outlet property="trashtypePicker" destination="kDc-NA-ogt" id="BUO-zz-Cz7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1230" y="464"/>
+        </scene>
+        <!--Trashed Stuff-->
+        <scene sceneID="rzU-AR-aUi">
+            <objects>
+                <tableViewController title="Trashed Stuff" id="oS4-Ed-3kD" customClass="DisplayTrashTableViewController" customModule="LN_TrashSort" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QDY-iC-vEH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" id="ZrW-Ta-2mB">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZrW-Ta-2mB" id="qmT-EU-smy">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trashCell" id="BpB-vf-Zqg">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BpB-vf-Zqg" id="cxn-KX-cKv">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oS4-Ed-3kD" id="cST-57-eUQ"/>
+                            <outlet property="delegate" destination="oS4-Ed-3kD" id="VoP-QO-yaX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Trashed Stuff" id="zXq-xm-xot">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="bIJ-LW-4LH"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6T-XS-s7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1909" y="464"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J66-2g-SGy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5la-oM-u6r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z8F-EK-0gE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6lS-Ov-MCd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1c-Z7-XMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="-228"/>
         </scene>
     </scenes>
 </document>

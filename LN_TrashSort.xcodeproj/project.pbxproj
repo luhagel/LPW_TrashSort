@@ -12,6 +12,7 @@
 		81CE8C6A1D1D9D6200E28E57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CE8C681D1D9D6200E28E57 /* Main.storyboard */; };
 		81CE8C6C1D1D9D6200E28E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81CE8C6B1D1D9D6200E28E57 /* Assets.xcassets */; };
 		81CE8C6F1D1D9D6200E28E57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CE8C6D1D1D9D6200E28E57 /* LaunchScreen.storyboard */; };
+		81CE8C771D1DAB8300E28E57 /* DisplayTrashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE8C761D1DAB8300E28E57 /* DisplayTrashTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		81CE8C6B1D1D9D6200E28E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81CE8C6E1D1D9D6200E28E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81CE8C701D1D9D6200E28E57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81CE8C761D1DAB8300E28E57 /* DisplayTrashTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayTrashTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				81CE8C6B1D1D9D6200E28E57 /* Assets.xcassets */,
 				81CE8C6D1D1D9D6200E28E57 /* LaunchScreen.storyboard */,
 				81CE8C701D1D9D6200E28E57 /* Info.plist */,
+				81CE8C761D1DAB8300E28E57 /* DisplayTrashTableViewController.swift */,
 			);
 			path = LN_TrashSort;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				81CE8C671D1D9D6200E28E57 /* ViewController.swift in Sources */,
 				81CE8C651D1D9D6200E28E57 /* AppDelegate.swift in Sources */,
+				81CE8C771D1DAB8300E28E57 /* DisplayTrashTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
