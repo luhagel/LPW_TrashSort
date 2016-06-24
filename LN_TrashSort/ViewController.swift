@@ -20,17 +20,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func trashItButtonClick(sender: UIButton) {
         
         if trashnameTextField.text !=  nil{
-        
             trashIt()
-        
         } else {
-        
             print("Empty")
-        
         }
-        
-       
-    
     }
     
     
@@ -43,7 +36,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        // Do any additional setup after loading the view, typically from a nib.v
         
         self.trashtypePicker.dataSource = self;
         self.trashtypePicker.delegate = self;
@@ -77,6 +73,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             trashnameTextField.text = ""
         }
     
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     //MARK: Methods

@@ -42,7 +42,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fHB-3m-3TD">
                                         <rect key="frame" x="20" y="90" width="520" height="212"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Trash Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohB-gH-k9O">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trash Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohB-gH-k9O">
                                                 <rect key="frame" x="0.0" y="0.0" width="520" height="62"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -89,7 +89,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TrashCan" id="jOH-gK-eMw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="aJz-zQ-iNu">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="trash" id="aJz-zQ-iNu">
                             <connections>
                                 <segue destination="oS4-Ed-3kD" kind="show" id="ENf-KX-gi8"/>
                             </connections>
